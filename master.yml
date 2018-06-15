@@ -1,0 +1,11 @@
+---
+
+- hosts: home_server ops_insights_servers processfast_servers client_servers
+  become: true
+  become_method: sudo
+  vars:
+  #  reboot: "{{ reboot | default(default_reboot) }}"
+  roles:
+    - update-servers 
+
+

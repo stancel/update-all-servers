@@ -1,0 +1,7 @@
+# Git Ignore File - Add whatever is needed here
+
+.DS_Store
+
+*.retry
+
+

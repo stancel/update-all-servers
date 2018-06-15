@@ -1,0 +1,31 @@
+galaxy_info:
+  author: 'Brad Stancel'
+  description: Basic Ansible role to update any packages for servers that use apt and/or yum package managers
+  company: YourOnlineDept.com
+
+
+  license: BSD
+
+  min_ansible_version: 2.4
+
+  #github_branch:
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+  - name: Debian
+    versions:
+    - all
+  - name: RHEL
+    versions:
+    - all
+
+  galaxy_tags:
+    - apt
+    - yum
+    - update
+
+
+dependencies: []

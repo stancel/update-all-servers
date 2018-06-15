@@ -1,0 +1,11 @@
+---
+# vars file for update-servers
+
+
+#####     Optional Variables      #####
+
+# These variables are set with the below defaults in defaults/main.yml. 
+# Only uncomment and change them or pass values if you would like
+
+# Should the servers be rebooted if needed
+#reboot: "no"

@@ -1,0 +1,5 @@
+---
+# defaults file for update-servers
+
+# Should the servers be rebooted if needed
+reboot: "no"

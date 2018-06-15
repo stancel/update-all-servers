@@ -3,12 +3,11 @@ galaxy_info:
   description: Basic Ansible role to update any packages for servers that use apt and/or yum package managers
   company: YourOnlineDept.com
 
-
   license: BSD
 
   min_ansible_version: 2.4
 
-  #github_branch:
+  github_branch: master
 
   platforms:
   - name: Ubuntu

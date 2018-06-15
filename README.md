@@ -22,9 +22,9 @@ Variables
 ------------
 
 Should the servers be rebooted if needed. The default is "no"
-
-	`reboot: "yes""`
-
+```
+	reboot: "yes"
+```
 
 Roles
 ------------

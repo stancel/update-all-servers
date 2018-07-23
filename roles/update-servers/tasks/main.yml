@@ -46,7 +46,7 @@
       async: 1
       poll: 0
 
-    - name: "Confirming Server comes back online"
+    - name: "Confirming Server comes back online - non-root users"
       become: true
       become_method: sudo
       local_action:
@@ -57,6 +57,18 @@
           timeout=320
           connect_timeout=15
           state=started   
+      when: ansible_user != "root"
+
+    - name: "Confirming Server comes back online - root users"
+      local_action:
+        module: wait_for
+          host="{{ ansible_ssh_host }}"
+          port=22
+          delay=60
+          timeout=320
+          connect_timeout=15
+          state=started   
+      when: ansible_user == "root"
 
     # - name: "Confirming Server comes back online"  
       # local_action: wait_for host={{ ansible_ssh_host }} state=started port=22 delay=30 timeout=300 connect_timeout=15

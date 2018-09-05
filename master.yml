@@ -6,6 +6,6 @@
   vars:
   #  reboot: "{{ reboot | default(default_reboot) }}"
   roles:
-    - update-servers 
+    - stancel.update-servers 
 
 

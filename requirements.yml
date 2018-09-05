@@ -19,7 +19,8 @@
 
 
 
-- name: update-servers
-  src: https://github.com/stancel/update-servers
-  version: 1.0.0
-  
+#- name: update-servers
+#  src: https://github.com/stancel/update-servers
+#  version: 1.0.0
+
+- src: stancel.update-servers  

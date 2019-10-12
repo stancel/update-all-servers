@@ -42,12 +42,13 @@
     - name: "Rebooting Server" 
       become: true
       become_method: sudo
-      shell: 'sleep 5 && shutdown -r now "Reboot triggered by Ansible" && sleep 5'
+      shell: 'sleep 1 && shutdown -r now "Reboot triggered by Ansible" && sleep 1'
       async: 1
       poll: 0
 
     - name: "Confirming Server comes back online"
-      become: false
+      become: true
+      become_method: sudo
       local_action:
         module: wait_for
           host="{{ ansible_ssh_host }}"
@@ -57,22 +58,11 @@
           connect_timeout=15
           state=started   
 
-#    - name: "Confirming Server comes back online - root users"
-#      local_action:
-#        module: wait_for
-#          host="{{ ansible_ssh_host }}"
-#          port=22
-#          delay=60
-#          timeout=320
-#          connect_timeout=15
-#          state=started   
-#      when: ansible_user == "root"
-
     # - name: "Confirming Server comes back online"  
       # local_action: wait_for host={{ ansible_ssh_host }} state=started port=22 delay=30 timeout=300 connect_timeout=15
     
   # Only execute the above task block if we have specifed to reboot and the server needs it
-  when: reboot == "yes" and reboot_required_file.stat.exists
+  when: update_servers_reboot == "yes" and reboot_required_file.stat.exists
 
 
 

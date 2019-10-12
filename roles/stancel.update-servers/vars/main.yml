@@ -8,4 +8,4 @@
 # Only uncomment and change them or pass values if you would like
 
 # Should the servers be rebooted if needed
-#reboot: "no"
+#update_servers_reboot: "no"

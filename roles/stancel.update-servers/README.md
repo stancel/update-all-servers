@@ -13,7 +13,7 @@ Role Variables
 
 Should the servers be rebooted if needed. The default is no.
 ```
-	reboot: "no"
+	update_servers_reboot: "no"
 ```
 Dependencies
 ------------
@@ -27,7 +27,7 @@ Example Playbook
 	  vars_files:
 	    - vars/main.yml
 	  roles:
-	    - { role: stancel.update-servers }
+	    - stancel.update-servers
 
 
 or 
@@ -35,9 +35,9 @@ or
 
 	- hosts: all
 	  vars:
-		reboot: "yes"
+		update_servers_reboot: "yes"
 	  roles:
-	    - { role: stancel.update-servers }
+	    - stancel.update-servers
 
 License
 -------
@@ -47,4 +47,4 @@ BSD
 Author Information
 ------------------
 
-Brad Stancel
+[Brad Stancel](https://github.com/stancel)

@@ -1,8 +1,8 @@
 ---
 
-- hosts: home_server ops_insights_servers processfast_servers client_servers personal_webservers
-  become: true
-  become_method: sudo
+- hosts: home_server ops_insights_servers processfast_servers client_servers personal_webservers voip_servers wordpress_servers
+  #become: true
+  #become_method: sudo
   vars:
   #  reboot: "{{ reboot | default(default_reboot) }}"
   roles:
